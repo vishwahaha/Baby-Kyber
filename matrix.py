@@ -29,6 +29,12 @@ class Matrix:
         self.rows = [list(item) for item in zip(*self.rows)]
         return self
 
+    def remove_wrapper(self):
+        """
+        Return this matrix in a list of lists form.
+        """
+        return self.rows
+
     def __call__(self, elements):
         if not isinstance(elements, list):
             raise TypeError('Elements of matrix must be passed in a list')
